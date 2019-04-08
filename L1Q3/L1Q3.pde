@@ -4,7 +4,7 @@ void setup(){
 }
 void setCS(){
   translate(width /2, height /2);
-  scale(10,-10,10);
+  scale(50,-50,50);
 }
 float tetag = PI/75; //Velocidade angular
 float teta = 3*PI/2; //Começar do ponto mais em baixo do circulo
@@ -28,5 +28,5 @@ void draw(){
   circle(5, 5, 10);
   circle(CrodaX,CrodaY,2);
   rotateX(29*PI/90);
-  line(5,4,6,5,4,0);
+  //line(5,4,6,5,4,0);
 }

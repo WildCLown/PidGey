@@ -1,5 +1,5 @@
 void setup(){
-  frameRate(30);
+  frameRate(60);
   size(800, 600, P2D);
 }
 void setCS(){
@@ -10,19 +10,17 @@ float sec = 0;
 float W = (PI/120);
 float xA = 1;
 float yA = 0;
-float xB = -2;
-float yB = 0;
-float xC = 0.5;
-float yC = 0;
 float teta = 0;
 float teta2 = 0;
 float Raio = 1;
-float i;
 void draw(){
   setCS();
   background(255);
   point(xA,yA);
-  if(teta <= PI){
+  //Pontos para saber onde bate
+  //point(1,0);
+  //point(-2,0);
+  if(teta <= PI){//Ida do ponto
     xA = Raio*cos(teta);
     yA = Raio*sin(teta);
     if(teta <= PI){
@@ -30,7 +28,7 @@ void draw(){
     }
     teta = W*sec;
     Raio = 1+ teta/PI;
-  }else{
+  }else{ //Volta do ponto
     if(sec>0){
       sec--;
     }
